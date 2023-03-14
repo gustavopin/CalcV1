@@ -11,4 +11,5 @@ PS: This is a begginer's code, a first calculator done with python.
 Future Features:
 
 [  ] The project should got back to the beggining after you finish a calculation 
+
 [  ] The project should calculate a % from 2 numbers given by the user 
