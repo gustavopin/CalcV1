@@ -14,4 +14,10 @@ Future Features:
 
 [ X ] The project should calculate a how much x% is from N number given by the user. 
 
-[   ] From the percentage tab, the calculator should give an option to calculate the percentage of Y number based on X number.
+[ X ] From the percentage tab, the calculator should give an option to calculate the percentage of Y number based on X number.
+
+[   ] Include a stop if the person tries to calculate a negative percentage.
+
+[   ] Better explain the second percentage opperation
+
+[   ] Include square root
