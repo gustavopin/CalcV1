@@ -1,3 +1,6 @@
+#libraries
+import math
+
 #main variables
 x = float; y = float
 opperation = str
@@ -15,6 +18,7 @@ while z == 'Y':
     print('C for Multiplication')
     print('D for Division')
     print('E for Percentage')
+    print('F for Square root')
     print()
 
     #Welcome and first phase of the program. Here it will difine what opperation the user will do
@@ -27,6 +31,7 @@ while z == 'Y':
     mult = 0
     divi = 0
     perc = 0
+    root = 0
 
     #Sum opperation
     if opperation == 'A':
@@ -118,9 +123,14 @@ while z == 'Y':
         if n == 'A':
             x = float(input('Type a number: '))
             y = float(input('Type the wanted percentage of the number: '))
-            perc = (x / 100) * y
-            print(f'{y}% of {x} is {perc}')
-            print()
+            if y < 0:
+                print ('Negative percentages do not exist, please, type another number')
+                print()
+            else:
+                perc = (x / 100) * y
+                print(f'{y}% of {x} is {perc}')
+                print()
+            
         elif n == 'B':
             x = float(input('Type a base number (it will be your 100%): '))
             y = float(input('Type the second number (it will be compared to the first one): '))
@@ -130,6 +140,17 @@ while z == 'Y':
         else:
            print('Opperation not found.') 
            print()
+
+    #Square root operation
+    elif opperation == 'F':
+        x = float(input('Type the number: ' ))
+        if x < 0:
+            print('The square root of this number is not possible with simple math')
+            print()
+        else:
+            root = math.sqrt(x)
+            print(f'The square root of {x} is {root}')
+            print()
 
     #Message shown if the user type any letter that is not included in the table of opperations        
     else:

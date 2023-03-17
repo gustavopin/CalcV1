@@ -16,8 +16,8 @@ Future Features:
 
 [ X ] From the percentage tab, the calculator should give an option to calculate the percentage of Y number based on X number.
 
-[   ] Include a stop if the person tries to calculate a negative percentage.
+[ X ] Include a stop if the person tries to calculate a negative percentage.
 
 [   ] Better explain the second percentage opperation
 
-[   ] Include square root
+[ X ] Include square root
