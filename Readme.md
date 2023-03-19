@@ -21,3 +21,5 @@ Future Features:
 [   ] Better explain the second percentage opperation
 
 [ X ] Include square root
+
+[   ] Include exponentiation
