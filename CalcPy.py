@@ -9,11 +9,10 @@ import math
 
 #launcher
 z = str(input('Would you like to start the calculator (Y/N) '))
-print()
 while z == 'Y':
 
     #table of operations
-    print('Types of operation available:')
+    print('\nTypes of operation available:')
     print()
     print('A for Sum')
     print('B for Subtraction')
@@ -43,157 +42,116 @@ while z == 'Y':
     if operation == 'A':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
-        print()
         sum = x + y
-        print(f'Total sum: {sum}')
-        print()
-        n = str(input('Do you want to sum more numbers to the result of the last opperation (Y/N)? '))
-        print()
+        print(f'\nTotal sum: {sum}')
+        n = str(input('\nDo you want to sum more numbers to the result of the last opperation (Y/N)? '))
         #continue the sum based on the result of the last operation
         while n == 'Y':
-            x = float(input('Type the next number: '))
-            print()
+            x = float(input('\nType the next number: '))
             sum = sum + x
-            print(f"Total Sum: {sum}")
-            print()
-
-            n = str(input('Do you want to sum more numbers to the result of the last opperation (Y/N)? '))
-            print()
+            print(f"\nTotal Sum: {sum}")
+            n = str(input('\nDo you want to sum more numbers to the result of the last opperation (Y/N)? '))
 
     #Subtraction operation
     elif operation == 'B':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
-        print()
         sub = x - y
-        print(f'Total subtraction: {sub}')
-        print()
-        n = str(input('Do you want to subtract more numbers from the result of the last opperation (Y/N)? '))
-        print()
+        print(f'\nTotal subtraction: {sub}')
+        n = str(input('\nDo you want to subtract more numbers from the result of the last opperation (Y/N)? '))
         #continue the subtraction based on the result of the last operation
         while n == 'Y':
-            x = float(input('Type the next number: '))
-            print()
+            x = float(input('\nType the next number: '))
             sub = sub - x
-            print(f"Total subtraction: {sub}")
-            print()
-            n = str(input('Do you want to subtract more numbers from the result of the last opperation (Y/N)? '))
-            print()
+            print(f"\nTotal subtraction: {sub}")
+            n = str(input('\nDo you want to subtract more numbers from the result of the last opperation (Y/N)? '))
 
     #Multiplication operation
     elif operation == 'C':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
         mult = x * y
-        print(f'Multiplication total: {mult}')
-        print()
-        n = str(input('Do you want to multiply the result of the last opperation (Y/N)? '))
-        print()
+        print(f'\nMultiplication total: {mult}')
+        n = str(input('\nDo you want to multiply the result of the last opperation (Y/N)? '))
         #continue the multiplication based on the result of the last opperation
         while  n == 'Y':
-            x = float(input('Type the next multiplier: '))
-            print()
+            x = float(input('\nType the next multiplier: '))
             mult = mult * x
-            print(f'Multiplication total: {mult}')
-            print()
-            n = str(input('Do you want to multiply the result of the last opperation (Y/N)? '))
-            print()
+            print(f'\nMultiplication total: {mult}')
+            n = str(input('\nDo you want to multiply the result of the last opperation (Y/N)? '))
 
     #Division Operation
     elif operation == 'D':
         x = float(input('Type the dividend number: '))
         y = float(input('Type the divisor number: '))
-        print()
         if y == 0:
-            print('The number cannot be divided by zero, try another number!')
-            y = float(input('Type the divisor number: '))
-            print()
+            print('\nThe number cannot be divided by zero, try another number!')
+            y = float(input('\nType the divisor number: '))
         divi = x / y
-        print(f'Total division: {divi}')
-        print()
-        n = str(input('Do you want to divide the result of the last opperation (Y/N)? '))
-        print()
+        print(f'\nTotal division: {divi}')
+        n = str(input('\nDo you want to divide the result of the last opperation (Y/N)? '))
         #continue the division based on the result of the last operation
         while  n == 'Y':
-            x = float(input('Type the next divisor: '))
+            x = float(input('\nType the next divisor: '))
             divi = divi / x
-            print(f'Total division: {divi}')
-            print()
-            n = str(input('Do you want to divide the result of the last opperation (Y/N)? '))
-            print()
+            print(f'\nTotal division: {divi}')
+            n = str(input('\nDo you want to divide the result of the last opperation (Y/N)? '))
+
 
     #Percentage of a certain number
     elif operation == 'E':
-        print()
         print('A to know how much is a certain percentage of a number')
         print('B to know the percentage of a number compared to a base number')
-        print()
         #choice of what percentage operation to do
-        n = str(input('What type of percentage operation do you want to do? '))
-        print()
+        n = str(input('\nWhat type of percentage operation do you want to do? '))
         if n == 'A':
-            x = float(input('Type a number: '))
+            x = float(input('\nType a number: '))
             y = float(input('Type the wanted percentage of the number: '))
             if y < 0:
-                print ('Negative percentages do not exist, please, type another number')
-                print()
+                print ('\nNegative percentages do not exist, please, type another number')
             else:
                 perc = (x / 100) * y
-                print(f'{y}% of {x} is {perc}')
-                print()
+                print(f'\n{y}% of {x} is {perc}')
         
         #rule of three    
         elif n == 'B':
-            x = float(input('Type a base number (it will be your 100%): '))
+            x = float(input('\nType a base number (it will be your 100%): '))
             y = float(input('Type the second number (it will be compared to the first one): '))
             perc = (y * 100) / x
-            print(f'{y} is {perc}% of {x}')
-            print()
+            print(f'\n{y} is {perc}% of {x}')
         else:
-           print('Opperation not found.') 
-           print()
+           print('\nOpperation not found.') 
 
     #Square root operation
     elif operation == 'F':
-        x = float(input('Type the number: ' ))
-        print()
+        x = float(input('\nType the number: ' ))
         while x < 0:
-            print('The square root of this number is not possible with simple math')
-            print()
-            x = float(input('Try another number: ' ))
-            print()
+            print('\nThe square root of this number is not possible with simple math')
+            x = float(input('\nTry another number: ' ))
         root = math.sqrt(x)
-        print(f'The square root of {x} is {root}')
-        print()
+        print(f'\nThe square root of {x} is {root}')
 
     #exponentiation operation
     elif operation == 'G':
         x = float(input('Type your base number: '))
         y = float(input('Type your exponent: '))
-        print()
         expo = x ** y
-        print(f'{x} to the {y} is: {expo}')
-        print()
+        print(f'\n{x} to the {y} is: {expo}')
 
     #logarithm operation
     elif operation == 'H':
         x = float(input('Type the number you want to calculate the logarithm from: '))
         if x > 0:
-            y = float(input('Type the base number of the Logarithm function: '))
-            print()
+            y = float(input('\nType the base number of the Logarithm function: '))
             log = math.log(x,y)
-            print(f'The logarithm of {x} base {y} is {log}')
-            print()
+            print(f'\nThe logarithm of {x} base {y} is {log}')
+
         else:
-            print()
-            print('The log of negative numbers and zero is UNDEFINED, please try again')
-            print()
+            print('\nThe log of negative numbers and zero is UNDEFINED, please try again')
   
     #Message shown if the user type any letter that is not included in the table of operations        
     else:
-        print('Could not find that on our list, please choose a letter from the options available')
-        print()
+        print('\nCould not find that on our list, please choose a letter from the options available')
 
     #loop to start over
-    z = str(input('Would you like to do another operation (Y/N) '))
-    print()
+    z = str(input('\nWould you like to do another operation (Y/N) '))

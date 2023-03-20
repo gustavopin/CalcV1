@@ -1,7 +1,4 @@
-Hello, this is the Read Me for a simple python calculator.
-
-
-This project is made with python and it includes the basic mathematics operations and is being made to train my coding.
+This project is made with python and it includes the basic mathematics operations (sum, subtraction, multiplication and division) as well as more advanced calculation, as square roots, percentages, exponentiation and logarithms. Made to consolidate the knowledge on basic logic and simple python operators and command lines.
 
 
 The program begin asking you to choose one of them, after that, choose the operation based on the table presented.
@@ -19,7 +16,9 @@ For Logarithm: the calculator will ask you a number to calculate the logarithm o
 
 Thanks for having a look at this code.
 
-Future Features:
+Features:
+
+[ X ] Basic math (sum, subtraction, multiplication and division)
 
 [ X ] The project should got back to the beggining after you finish a calculation.
 
