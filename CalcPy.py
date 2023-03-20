@@ -1,18 +1,19 @@
 #libraries
 import math
 
+
 #main variables
-x = float; y = float #variables for calculations
-opperation = str #variable for type of opperation
-z = str #z is the variable to loop the calculator from finish to start
+#x = float; y = float variables for calculations
+#operation = str variable for type of operation
+# z = str z is the variable to loop the calculator from finish to start
 
 #launcher
 z = str(input('Would you like to start the calculator (Y/N) '))
 print()
 while z == 'Y':
 
-    #table of opperations
-    print('Types of opperation available:')
+    #table of operations
+    print('Types of operation available:')
     print()
     print('A for Sum')
     print('B for Subtraction')
@@ -24,11 +25,11 @@ while z == 'Y':
     print('H for Logarithm')
     print()
 
-    #Welcome and first phase of the program. Here it will difine what opperation the user will do
-    opperation = input('Hello and welcome to CalcPy, what type of calculation would you like to do? ')
+    #Welcome and first phase of the program. Here it will difine what operation the user will do
+    operation = input('Hello and welcome to CalcPy, what type of calculation would you like to do? ')
     print()
 
-    #The variables for opperations and their initial values
+    #The variables for operations and their initial values
     sum = 0
     sub = 0
     mult = 0
@@ -38,8 +39,8 @@ while z == 'Y':
     expo = 0
     log = 0
 
-    #Sum opperation
-    if opperation == 'A':
+    #Sum operation
+    if operation == 'A':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
         print()
@@ -48,7 +49,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to sum more numbers to the result of the last opperation (Y/N)? '))
         print()
-        #continue the sum based on the result of the last opperation
+        #continue the sum based on the result of the last operation
         while n == 'Y':
             x = float(input('Type the next number: '))
             print()
@@ -59,8 +60,8 @@ while z == 'Y':
             n = str(input('Do you want to sum more numbers to the result of the last opperation (Y/N)? '))
             print()
 
-    #Subtraction opperation
-    elif opperation == 'B':
+    #Subtraction operation
+    elif operation == 'B':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
         print()
@@ -69,7 +70,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to subtract more numbers from the result of the last opperation (Y/N)? '))
         print()
-        #continue the subtraction based on the result of the last opperation
+        #continue the subtraction based on the result of the last operation
         while n == 'Y':
             x = float(input('Type the next number: '))
             print()
@@ -79,8 +80,8 @@ while z == 'Y':
             n = str(input('Do you want to subtract more numbers from the result of the last opperation (Y/N)? '))
             print()
 
-    #Multiplication opperation
-    elif opperation == 'C':
+    #Multiplication operation
+    elif operation == 'C':
         x = float(input('Type the first number: '))
         y = float(input('Type the second number: '))
         mult = x * y
@@ -98,8 +99,8 @@ while z == 'Y':
             n = str(input('Do you want to multiply the result of the last opperation (Y/N)? '))
             print()
 
-    #Division Opperation
-    elif opperation == 'D':
+    #Division Operation
+    elif operation == 'D':
         x = float(input('Type the dividend number: '))
         y = float(input('Type the divisor number: '))
         print()
@@ -112,7 +113,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to divide the result of the last opperation (Y/N)? '))
         print()
-        #continue the division based on the result of the last opperation
+        #continue the division based on the result of the last operation
         while  n == 'Y':
             x = float(input('Type the next divisor: '))
             divi = divi / x
@@ -122,12 +123,12 @@ while z == 'Y':
             print()
 
     #Percentage of a certain number
-    elif opperation == 'E':
+    elif operation == 'E':
         print()
         print('A to know how much is a certain percentage of a number')
         print('B to know the percentage of a number compared to a base number')
         print()
-        #choice of what percentage opperation to do
+        #choice of what percentage operation to do
         n = str(input('What type of percentage operation do you want to do? '))
         print()
         if n == 'A':
@@ -153,7 +154,7 @@ while z == 'Y':
            print()
 
     #Square root operation
-    elif opperation == 'F':
+    elif operation == 'F':
         x = float(input('Type the number: ' ))
         print()
         while x < 0:
@@ -165,8 +166,8 @@ while z == 'Y':
         print(f'The square root of {x} is {root}')
         print()
 
-    #exponentiation opperation
-    elif opperation == 'G':
+    #exponentiation operation
+    elif operation == 'G':
         x = float(input('Type your base number: '))
         y = float(input('Type your exponent: '))
         print()
@@ -174,21 +175,21 @@ while z == 'Y':
         print(f'{x} to the {y} is: {expo}')
         print()
 
-    #logarithm opperation
-    elif opperation == 'H':
+    #logarithm operation
+    elif operation == 'H':
         x = float(input('Type the number you want to calculate the logarithm from: '))
         if x > 0:
             y = float(input('Type the base number of the Logarithm function: '))
             print()
             log = math.log(x,y)
-            print(f'The logarithm of {x} is {log}')
+            print(f'The logarithm of {x} base {y} is {log}')
             print()
         else:
             print()
             print('The log of negative numbers and zero is UNDEFINED, please try again')
             print()
   
-    #Message shown if the user type any letter that is not included in the table of opperations        
+    #Message shown if the user type any letter that is not included in the table of operations        
     else:
         print('Could not find that on our list, please choose a letter from the options available')
         print()
