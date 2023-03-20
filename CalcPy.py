@@ -20,6 +20,7 @@ while z == 'Y':
     print('E for Percentage')
     print('F for Square root')
     print('G for Exponentiation')
+    print('H for Logarithm')
     print()
 
     #Welcome and first phase of the program. Here it will difine what opperation the user will do
@@ -34,6 +35,7 @@ while z == 'Y':
     perc = 0
     root = 0
     expo = 0
+    log = 0
 
     #Sum opperation
     if opperation == 'A':
@@ -162,7 +164,21 @@ while z == 'Y':
         expo = x ** y
         print(f'{x} to the {y} is: {expo}')
         print()
-        
+
+    #logarithm opperation
+    elif opperation == 'H':
+        x = float(input('Type the number you want to calculate the logarithm from: '))
+        if x > 0:
+            y = float(input('Type the base number of the Logarithm function: '))
+            print()
+            log = math.log(x,y)
+            print(f'The logarithm of {x} is {log}')
+            print()
+        else:
+            print()
+            print('The log of negative numbers and zero is UNDEFINED, please try again')
+            print()
+  
     #Message shown if the user type any letter that is not included in the table of opperations        
     else:
         print('Could not find that on our list, please choose a letter from the options available')
