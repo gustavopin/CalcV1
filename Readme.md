@@ -18,8 +18,10 @@ Future Features:
 
 [ X ] Include a stop if the person tries to calculate a negative percentage.
 
-[   ] Better explain the second percentage opperation
+[ X ] Better explain the second percentage opperation
 
 [ X ] Include square root
 
-[   ] Include exponentiation
+[ X ] Include exponentiation
+
+[   ] 

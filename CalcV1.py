@@ -19,6 +19,7 @@ while z == 'Y':
     print('D for Division')
     print('E for Percentage')
     print('F for Square root')
+    print('G for Exponentiation')
     print()
 
     #Welcome and first phase of the program. Here it will difine what opperation the user will do
@@ -32,6 +33,7 @@ while z == 'Y':
     divi = 0
     perc = 0
     root = 0
+    expo = 0
 
     #Sum opperation
     if opperation == 'A':
@@ -152,6 +154,15 @@ while z == 'Y':
             print(f'The square root of {x} is {root}')
             print()
 
+    #exponentiation opperation
+    elif opperation == 'G':
+        x = float(input('Type your base number: '))
+        y = float(input('Type your exponent: '))
+        print()
+        expo = x ** y
+        print(f'{x} to the {y} is: {expo}')
+        print()
+        
     #Message shown if the user type any letter that is not included in the table of opperations        
     else:
         print('Could not find that on our list, please choose a letter from the options available')
