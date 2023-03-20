@@ -2,12 +2,13 @@
 import math
 
 #main variables
-x = float; y = float
-opperation = str
+x = float; y = float #variables for calculations
+opperation = str #variable for type of opperation
 z = str #z is the variable to loop the calculator from finish to start
 
 #launcher
 z = str(input('Would you like to start the calculator (Y/N) '))
+print()
 while z == 'Y':
 
     #table of opperations
@@ -27,7 +28,7 @@ while z == 'Y':
     opperation = input('Hello and welcome to CalcPy, what type of calculation would you like to do? ')
     print()
 
-    #The variables for the four basic opperations and their initial values
+    #The variables for opperations and their initial values
     sum = 0
     sub = 0
     mult = 0
@@ -47,6 +48,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to sum more numbers to the result of the last opperation (Y/N)? '))
         print()
+        #continue the sum based on the result of the last opperation
         while n == 'Y':
             x = float(input('Type the next number: '))
             print()
@@ -67,6 +69,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to subtract more numbers from the result of the last opperation (Y/N)? '))
         print()
+        #continue the subtraction based on the result of the last opperation
         while n == 'Y':
             x = float(input('Type the next number: '))
             print()
@@ -85,6 +88,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to multiply the result of the last opperation (Y/N)? '))
         print()
+        #continue the multiplication based on the result of the last opperation
         while  n == 'Y':
             x = float(input('Type the next multiplier: '))
             print()
@@ -108,6 +112,7 @@ while z == 'Y':
         print()
         n = str(input('Do you want to divide the result of the last opperation (Y/N)? '))
         print()
+        #continue the division based on the result of the last opperation
         while  n == 'Y':
             x = float(input('Type the next divisor: '))
             divi = divi / x
@@ -122,6 +127,7 @@ while z == 'Y':
         print('A to know how much is a certain percentage of a number')
         print('B to know the percentage of a number compared to a base number')
         print()
+        #choice of what percentage opperation to do
         n = str(input('What type of percentage operation do you want to do? '))
         print()
         if n == 'A':
@@ -134,7 +140,8 @@ while z == 'Y':
                 perc = (x / 100) * y
                 print(f'{y}% of {x} is {perc}')
                 print()
-            
+        
+        #rule of three    
         elif n == 'B':
             x = float(input('Type a base number (it will be your 100%): '))
             y = float(input('Type the second number (it will be compared to the first one): '))
@@ -148,13 +155,15 @@ while z == 'Y':
     #Square root operation
     elif opperation == 'F':
         x = float(input('Type the number: ' ))
-        if x < 0:
+        print()
+        while x < 0:
             print('The square root of this number is not possible with simple math')
             print()
-        else:
-            root = math.sqrt(x)
-            print(f'The square root of {x} is {root}')
+            x = float(input('Try another number: ' ))
             print()
+        root = math.sqrt(x)
+        print(f'The square root of {x} is {root}')
+        print()
 
     #exponentiation opperation
     elif opperation == 'G':
@@ -184,5 +193,6 @@ while z == 'Y':
         print('Could not find that on our list, please choose a letter from the options available')
         print()
 
+    #loop to start over
     z = str(input('Would you like to do another operation (Y/N) '))
     print()
