@@ -24,4 +24,4 @@ Future Features:
 
 [ X ] Include exponentiation
 
-[   ] 
+[   ] Include logarithm opperation
